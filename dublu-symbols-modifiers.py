@@ -236,7 +236,7 @@ def lookup(chord):
                 output = output + "{}"
 
     # apply capitalisation
-    if capitalization == "*":
+    if capitalization == "#":
         output = output + "{-|}"
 
     # all done :D
