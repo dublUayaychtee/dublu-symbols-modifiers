@@ -76,7 +76,7 @@ By default no capitalisation is applied.
 |-----------------------------------------|------------------|
 | ![Lowercase Diagram](img/lowercase.svg) | `x . x`, `(cons` |
 
-With the `*` key used, the next input is capitalised.
+With the `#` key used, the next input is capitalised.
 | Key | Output |
 |-----------------------------------------|---------------------|
 | ![Uppercase Diagram](img/uppercase.svg) | `x . X`, `said "To` |
