@@ -125,8 +125,8 @@ def lookup(chord):
 
     # get the attachment method
     attachment = attachment == "*"
-    attach = [(attachmentMethod == "space") ^ ('R' in modifier),
-                (attachmentMethod == "space") ^ ('B' in modifier)]
+    attach = [(attachmentMethod == "space") ^ ('F' in modifier),
+                (attachmentMethod == "space") ^ ('R' in modifier)]
 
     # get if command or not
     command = True if modifier and not attachment else False
