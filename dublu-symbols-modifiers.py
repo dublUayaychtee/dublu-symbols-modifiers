@@ -145,11 +145,8 @@ def lookup(chord):
     if 'U' in repetitions:
         repeat = repeat + 2
 
-    # if TP is being held as well, then user is inputting a Fx key - like alt+F4
-    function = False
-    if "T" in pattern and "P" in pattern:
-        function = True
 
+    function = False
     # get pressed character
     character = None
     if ender == uniqueEnders[0]: # symbols -LTZ
@@ -167,6 +164,10 @@ def lookup(chord):
             count = count + 4
         if "S" in pattern:
             count = count + 8
+
+        # if TP is being held as well, then user is inputting a Fx key - like alt+F4
+        if "T" in pattern and "P" in pattern:
+            function = True
 
         # add the 'F' if fn key
         if function:
