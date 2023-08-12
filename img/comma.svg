@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="400"
+   height="300"
+   viewBox="0 0 105.83334 79.375"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <pattern
+       xlink:href="#Strips1_1"
+       preserveAspectRatio="xMidYMid"
+       id="pattern53"
+       patternTransform="matrix(2,0,0,2,0,-52.916662)"
+       x="0"
+       y="0" />
+    <pattern
+       xlink:href="#Strips1_1"
+       preserveAspectRatio="xMidYMid"
+       id="pattern52"
+       patternTransform="matrix(2,0,0,2,0,-52.916662)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="2"
+       height="10"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_1"
+       style="fill:#1cc400">
+      <rect
+         style="stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="11"
+         id="rect134" />
+    </pattern>
+  </defs>
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect3"
+     width="26.458332"
+     height="26.458332"
+     x="-66.145836"
+     y="13.229168"
+     transform="scale(-1,1)" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect23"
+     width="26.458332"
+     height="26.458332"
+     x="-39.687504"
+     y="13.229168"
+     transform="scale(-1,1)" />
+  <rect
+     style="fill:#c700e5;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect24"
+     width="26.458332"
+     height="26.458332"
+     x="-66.145821"
+     y="-66.145836"
+     transform="scale(-1)" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect26"
+     width="26.458332"
+     height="26.458332"
+     x="-92.604156"
+     y="-39.6875"
+     transform="scale(-1)" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect27"
+     width="26.458332"
+     height="26.458332"
+     x="13.229167"
+     y="39.687504" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect28"
+     width="26.458332"
+     height="26.458332"
+     x="-92.604156"
+     y="39.687504"
+     transform="scale(-1,1)" />
+  <g
+     id="g1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+       x="26.463404"
+       y="33.433582"
+       id="text23"><tspan
+         id="tspan23"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292"
+         x="26.463404"
+         y="33.433582">T</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+       x="52.921741"
+       y="33.43359"
+       id="text24"><tspan
+         id="tspan24"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292"
+         x="52.921741"
+         y="33.43359">P</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+       x="79.380051"
+       y="33.43359"
+       id="text25"><tspan
+         id="tspan25"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292"
+         x="79.380051"
+         y="33.43359">H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+       x="26.463404"
+       y="59.891918"
+       id="text27"><tspan
+         id="tspan27"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292"
+         x="26.463404"
+         y="59.891918">K</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+       x="52.921741"
+       y="59.891933"
+       id="text28"><tspan
+         id="tspan28"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292"
+         x="52.921741"
+         y="59.891933">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linejoin:round;stroke-dasharray:none"
+       x="79.380051"
+       y="59.891933"
+       id="text29"><tspan
+         id="tspan29"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'FiraCode Nerd Font';-inkscape-font-specification:'FiraCode Nerd Font';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.32292"
+         x="79.380051"
+         y="59.891933">R</tspan></text>
+  </g>
+</svg>

@@ -1,222 +1,194 @@
-# Emily's Symbol Dictionary 
+# dublU's Symbol Dictionary
 
-## Design 
+This is dictionary that combines Emily's Modifier Dictionary and Emily
+s Symbol Dictionary so that they work the same way. Check those dictionaries out here:
+
+-   [Emily's Symbol Dictionary](https://github.com/EPLHREU/emily-symbols)
+-   [Emily's Modifier Dictionary](https://github.com/EPLHREU/emily-modifiers)
+
+## Design
 
 This dictionary was created with the following goals in mind:
-- Have a consistent method to type (pretty much) every symbol 
-- Specify spacing and capitalisation of that symbol in 1 stroke 
-- Hackable and understandable to anyone who finds it useful :)
 
-## Sections 
+-   Have a consistent method to type (pretty much) every symbol
+-   Specify spacing and capitalisation of that symbol in 1 stroke
+-   Hackable and understandable to anyone who finds it useful :)
+
+## Sections
 
 To support the design goals, for each symbol there are 6 different options specifiable in sections of each stroke:
 
-1. Unique Starter (Red)
-2. Spacing/Attachment (Orange)
-3. Capitalisation (Teal)
-4. Variant (Green)
-5. Symbol (Purple)
-6. Repetition (Blue)
+1. Capitalisation (Teal)
+2. Symbol (Purple)
+3. Variant (Magenta)
+4. Repetition (Blue)
+5. Spacing (Yellow)
+6. Modifier (Green)
+7. Ending (Orange/Red)
 
 These options are mapped to different sections of the steno board:
 
-![Coloured Layout Diagram](img/layout.png)
+![Coloured Layout Diagram](img/layout.svg)
 
-### Unique Starter
-The first part of the stroke is always the same and identifies all the symbols.
-In the Magnum Steno dictionary that I use, `SKHW` is a unique key combination for the left hand that is never used.
-(note that `SKWHR` is used, but by not using `R-`, this makes it unique)
+### Unique Ender
 
-![Unique Starter Diagram](img/starter.png)
+The `-TZ` part of the stroke is always the same.
+The `-LG` part distinguishes between symbols, letters, and numbers.
 
-Due to this, all the combinations of remaining strokes will have no clashes and are free to be used to specify everything needed. 
-To adjust this starter to your dictionary just change the "uniqueStarter" variable at the top of the dictionary!
+![Unique Starter Diagram](img/ender.svg)
 
-### Attachment 
-There is a consistent way to specify attachment to the text around a symbol using the `A` and `O` keys.
-From community feedback there are two different attachment specification systems that are the inverse of each other:
-- space
-- attachment
+| Keys                                            | Description             |
+| ----------------------------------------------- | ----------------------- |
+| ![Ender Diagram Symbols](img/ender-symbols.svg) | Use `-LTZ` for symbols  |
+| ![Ender Diagram Letters](img/ender-letters.svg) | Use `-GTZ` for letters  |
+| ![Ender Diagram Numbers](img/ender.svg)         | Use `-LGTZ` for numbers |
 
-`space` specification is the default system.
-With space attachment, the attachment keys specify on which side of the symbol spaces should be inserted. 
-This means without any attachment keys used, no spaces will be inserted and the symbol will fully attach on both sides like the `/` in: `usr/bin`
-Using `A` will insert a space before the symbol, and using `O` will insert a space after the symbol.
+### Modifier keys
 
-In contrast, with `attachment` specification, the attachment keys specify on which side of the symbol spaces should be removed.
-This means with no attachment specified, spaces are inserted on both side of a symbol, like the `&` in: `one & two`.
-Using `A` will remove the space before the symbol, and using `O` will remove the space after the symbol.
+To do a key combo, press one or more of the modifier keys.
 
-`space` may be easier for programming with, due to `/` in file paths and programming language syntax.
-Whereas `attachment` may be easier for writing with, as most symbols in speech are on their own.
-But try each one and see what works best for you!
+| Keys                                         | Description |
+| -------------------------------------------- | ----------- |
+| ![Modifier Diagram Control](img/control.svg) | Control     |
+| ![Modifier Diagram Shift](img/shift.svg)     | Shift       |
+| ![Modifier Diagram Super](img/super.svg)     | Super       |
+| ![Modifier Diagram Meta](img/meta.svg)       | Meta / Alt  |
 
-To change which system you want to use, just change the `attachmentMethod` variable at the top of the dictionary between `"space"` and `"attachment"`.
+### Spacing / Attachment
 
-| Keys                                        | `space` | `attachment` |
-|---------------------------------------------|---------|--------------|
-| ![No Attachment Diagram](img/no-attach.png) | `x.x`   | `x . x`      |
+To specify spacing, use the `E` and `U` keys.
+In `space` mode, use the `E` key for a space to the left of the symbol, and use the `U` key for a space to the right of the symbol.
+In `attachment` mode, there are spaces on both sides by default and pressing the key removes the space on that side.
 
-| Keys                                            | `space` | `attachment` |
-|-------------------------------------------------|---------|--------------|
-| ![Left Attachment Diagram](img/left-attach.png) | `x .x`  | `x. x`       |
+| Keys                                          | Space mode | Attach mode |
+| --------------------------------------------- | ---------- | ----------- |
+| ![Spacing Diagram None](img/space-none.svg)   | `x.x`      | `x . x`     |
+| ![Spacing Diagram Left](img/space-left.svg)   | `x .x`     | `x. x`      |
+| ![Spacing Diagram Right](img/space-right.svg) | `x. x`     | `x .x`      |
+| ![Spacing Diagram Both](img/space-both.svg)   | `x . x`    | `x.x`       |
 
-| Keys                                              | `space` | `attachment` |
-|---------------------------------------------------|---------|--------------|
-| ![Right Attachment Diagram](img/right-attach.png) | `x. x`  | `x .x`       |
+### Capitalisation
 
-| Keys                                            | `space` | `attachment` |
-|-------------------------------------------------|---------|--------------|
-| ![Both Attachment Diagram](img/both-attach.png) | `x . x` | `x.x`        |
-
-### Capitalisation 
-
-The `*` can be used to specify capitalisation of the text following the symbol. 
+The `#` can be used to specify capitalisation of the text following the symbol.
 
 By default no capitalisation is applied.
-| Key                                     | Output           |
+| Key | Output |
 |-----------------------------------------|------------------|
-| ![Lowercase Diagram](img/lowercase.png) | `x . x`, `(cons` |
+| ![Lowercase Diagram](img/lowercase.svg) | `x . x`, `(cons` |
 
 With the `*` key used, the next input is capitalised.
-| Key                                     | Output              |
+| Key | Output |
 |-----------------------------------------|---------------------|
-| ![Uppercase Diagram](img/uppercase.png) | `x . X`, `said "To` |
+| ![Uppercase Diagram](img/uppercase.svg) | `x . X`, `said "To` |
 
 ### Variant
 
-There are a lot of similar symbols, to manage this, each symbol has a base symbol and a list of variant symbols. 
+There are a lot of similar symbols, to manage this, each symbol has a base symbol and a list of variant symbols.
 The specific variant required is chosen with a combination of the `E` and `U` keys, this allows for 4 total variants of a symbol.
 
-By default the base symbol is typed, this is generally the most common of all the variants.
-| Key                                     | Output   |
-|-----------------------------------------|----------|
-| ![Variant 0 Diagram](img/variant-0.png) | `(`, `$` |
+| Key                                     | Variant | Output |
+| --------------------------------------- | ------- | ------ |
+| ![Variant 0 Diagram](img/variant-0.svg) | `0`     | `(`    |
+| ![Variant 1 Diagram](img/variant-1.svg) | `1`     | `[`    |
+| ![Variant 2 Diagram](img/variant-2.svg) | `2`     | `<`    |
+| ![Variant 3 Diagram](img/variant-3.svg) | `3`     | `{`    |
 
-When the `E` key is used, the left (or first) variant is typed instead.
-| Key                                     | Output   |
-|-----------------------------------------|----------|
-| ![Variant 1 Diagram](img/variant-1.png) | `[`, `¥` |
-
-When the 'U' key is used, the right (or second) variant is typed.
-| Key                                     | Output   |
-|-----------------------------------------|----------|
-| ![Variant 2 Diagram](img/variant-2.png) | `<`, `€` |
-
-When both `E` and `U` are used, the final variant is typed.
-| Key                                     | Output   |
-|-----------------------------------------|----------|
-| ![Variant 3 Diagram](img/variant-3.png) | `{`, `£` |
-
-These variants are stored in the main symbols dictionary and you should edit them based on which ones are more frequent for you!
-Though I hope my defaults are good enough.
-
-### Symbol 
+### Symbol
 
 The main section is the symbol section, used to specify the specific symbol to type.
-Only a 2x3 grid is needed to address all the symbols, using variants.
+Only a 2x3 grid is needed to address all the symbols, using variants. Exception: & Ampersand.
 All of the patterns for symbols are done according to shape, rather than phonetics or briefs, and so should be remember visually with the images as an aid.
-For each symbol shape the pattern only addresses the base symbol, it doesn't apply as well to the variant symbols. As such, the variants should be anchored in memory to the base symbol itself rather than the pattern. 
+For each symbol shape the pattern only addresses the base symbol, it doesn't apply as well to the variant symbols. As such, the variants should be anchored in memory to the base symbol itself rather than the pattern.
 
-| Pattern                                         | Symbols                                               | Description                                                                 |
-|-------------------------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------|
-| Whitespace                                      |                                                       |                                                                             |
-| ![Whitespace Diagram](img/whitespace.png)       | `{#Tab} {#Backspace} {#Delete} {#Escape}`             | The pattern aligns with the tips of the arrows on a tab key legend: ↹       |
-| Arrows                                          |                                                       |                                                                             |
-| ![Arrow Diagram](img/arrow.png)                 | `{#Up} {#Left} {#Right} {#Down}`                      | Looks like an arrow key cluster                                             |
-| ↑                                               |                                                       |                                                                             |
-| ![Arrow Symbols Diagram](img/arrow-symbols.png) | `↑ ← → ↓`                                             | Looks like an upside-down arrow key cluster                                 |
-| Navigation                                      |                                                       |                                                                             |
-| ![Navigation Diagram](img/nav.png)              | `{#Page_Up} {#Home} {#End} {#Page_Down}`              | Arrow key cluster but with an addition key held down                        |
-| Music                                           |                                                       |                                                                             |
-| ![Music Diagram](img/music.png)                 | `{#AudioPlay} {#AudioPrev} {#AudioNext} {#AudioMute}` | Like a strangely rotated L for err... _L_ovely music?                       |
-| Audio                                           |                                                       |                                                                             |
-| ![Audio Diagram](img/audio.png)                 | `{#AudioMute} {#AudioLowerVolume} {#AudioRaiseVolume} {#Eject}` | Like a smaller strangely rotated L for err... _l_ovely music control?                       |
-| Blank                                           |                                                       |                                                                             |
-| ![Blank Diagram](img/blank.png)                 | `'' {*!} {*?} {#Space}`                               | It's blank! Self descriptive                                                |
-| Capitalization                                  |                                                       |                                                                             |
-| ![Capitalization Diagram](img/capitalization.png)| `{*-\|} {*<} {<} {*>}`                               | Up at the top, separate, it's pointy like capital letters       |
-| !                                               |                                                       |                                                                             |
-| ![Exclamation Diagram](img/exclamation.png)     | `! ¬ ↦ ¡`                                             | Vertical shape that's off to the left, like `!` on a regular keyboard       |
-| "                                               |                                                       |                                                                             |
-| ![Double Quote Diagram](img/double-quote.png)   | `" “ ” „`                                             | Two dots up high like its shape, and off to the left like on ISO keyboards  |
-| \#                                              |                                                       |                                                                             |
-| ![Hash Diagram](img/hash.png)                   | `# © ® ™`                                             | Two vertical bars like in the shape                                         |
-| $                                               |                                                       |                                                                             |
-| ![Dollar Diagram](img/dollar.png)               | `$ ¥ € £`                                             | Makes an `S` shape like a `$`                                               |
-| %                                               |                                                       |                                                                             |
-| ![Percent Diagram](img/percent.png)             | `% ‰ ‱ φ`                                             | Same as a `/` but with the two extra keys representing the dots             |
-| &                                               |                                                       |                                                                             |
-| ![Ampersand Diagram](img/ampersand.png)         | `& ∩ ∧ ∈`                                             | Makes a mirror image of the standard 'and' brief (mirrored for ease)        |
-| '                                               |                                                       |                                                                             |
-| ![quote Diagram](img/quote.png)                 | `' ‘ ’ ‚`                                             | One dot up high, similar to `"`, on the index for importance                |
-| (                                               |                                                       |                                                                             |
-| ![Open Diagram](img/open.png)                   | `( [ < {`                                             | Similar to the standard steno brief                                         |
-| )                                               |                                                       |                                                                             |
-| ![Close Diagram](img/close.png)                 | `) ] > }`                                             | Similar to the standard steno brief                                         |
-| *                                               |                                                       |                                                                             |
-| ![Star Diagram](img/star.png)                   | `* ∏ § ×`                                             | single dot shape, off to the right like JIS, up high in the sky             |
-| +                                               |                                                       |                                                                             |
-| ![Plus Diagram](img/plus.png)                   | `+ ∑ ¶ ±`                                             | single dot shape, off to the right like JIS, under the star                 |
-| ,                                               |                                                       |                                                                             |
-| ![Comma Diagram](img/comma.png)                 | `, ∪ ∨ ∉`                                             | Single dot shape, below like on a keyboard, middle finger as less important |
-| -                                               |                                                       |                                                                             |
-| ![Dash Diagram](img/dash.png)                   | `- − – —`                                             | Line in shape, up in the top right like a normal keyboard                   |
-| .                                               |                                                       |                                                                             |
-| ![Dot Diagram](img/dot.png)                     | `. • · …`                                             | Single dot in shape, below like on a keyboard, index finger as important    |
-| /                                               |                                                       |                                                                             |
-| ![Slash Diagram](img/slash.png)                 | `/ ⇒ ⇔ ÷`                                             | Shape of a `/`                                                              |
-| :                                               |                                                       |                                                                             |
-| ![Colon Diagram](img/colon.png)                 | `: ∋ ∵ ∴`                                             | Vertical shape, off to the right like a normal keyboard                     |
-| ;                                               |                                                       |                                                                             |
-| ![Semicolon Diagram](img/semicolon.png)         | `; ∀ ∃ ∄`                                             | Literally a `,` and `.` at the same time                                    |
-| =                                               |                                                       |                                                                             |
-| ![Equals Diagram](img/equals.png)               | `= ≡ ≈ ≠`                                             | Literally a `-` and a `_` at the same time                                  |
-| ?                                               |                                                       |                                                                             |
-| ![Question Diagram](img/question.png)           | `? ¿ ∝ ‽`                                             | Looks like the top of a `?`                                                 |
-| @                                               |                                                       |                                                                             |
-| ![At Diagram](img/at.png)                       | `@ ⊕ ⊗ ∅`                                             | Large complicated shape, only way to make a big spiral                      |
-| \\                                              |                                                       |                                                                             |
-| ![Backslash Diagram](img/backslash.png)         | `\ Δ √ ∞`                                             | Shape of a `\`                                                              |
-| ^                                               |                                                       |                                                                             |
-| ![Caret Diagram](img/caret.png)                 | `^ « » °`                                             | Shape of a `^` and other pointy/raised symbols                              |
-| \_                                              |                                                       |                                                                             |
-| ![Underscore Diagram](img/underscore.png)       | `_ ≤ ≥ µ`                                             | A line down low opposing `-`, and other lowered symbols                     |
-| \`                                              |                                                       |                                                                             |
-| ![Backtick Diagram](img/backtick.png)           | `` ` ⊂ ⊃ π``                                          | Single dot up high, next to `'`                                             |
-| \|                                              |                                                       |                                                                             |
-| ![Pipe Diagram](img/pipe.png)                   | `\| ⊤ ⊥ ¦`                                            | Nice symetrical vertical shape goes in the middle                           |
-| \~                                              |                                                       |                                                                             |
-| ![Tilde Diagram](img/tilde.png)                 | `~ ⊆ ⊇ ˜`                                             | Makes the shape of a `~`                                                    |
+All of these are the same as Emily's Symbol Dictionary, except that they are located on the left side (`TKPWHR`), and the & Ampersand is `SKP`, and not mirrored.
 
-### Repetition 
+| Pattern                                           | Symbols                                                         | Description                                                                 |
+| ------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Whitespace                                        |                                                                 |                                                                             |
+| ![Whitespace Diagram](img/whitespace.svg)         | `{#Tab} {#Backspace} {#Delete} {#Escape}`                       | The pattern aligns with the tips of the arrows on a tab key legend: ↹       |
+| Arrows                                            |                                                                 |                                                                             |
+| ![Arrow Diagram](img/arrow.svg)                   | `{#Up} {#Left} {#Right} {#Down}`                                | Looks like an arrow key cluster                                             |
+| ↑                                                 |                                                                 |                                                                             |
+| ![Arrow Symbols Diagram](img/arrow-symbols.svg)   | `↑ ← → ↓`                                                       | Looks like an upside-down arrow key cluster                                 |
+| Navigation                                        |                                                                 |                                                                             |
+| ![Navigation Diagram](img/nav.svg)                | `{#Page_Up} {#Home} {#End} {#Page_Down}`                        | Arrow key cluster but with an addition key held down                        |
+| Music                                             |                                                                 |                                                                             |
+| ![Music Diagram](img/music.svg)                   | `{#AudioPlay} {#AudioPrev} {#AudioNext} {#AudioMute}`           | Like a strangely rotated L for err... \_L_ovely music?                      |
+| Audio                                             |                                                                 |                                                                             |
+| ![Audio Diagram](img/audio.svg)                   | `{#AudioMute} {#AudioLowerVolume} {#AudioRaiseVolume} {#Eject}` | Like a smaller strangely rotated L for err... \_l_ovely music control?      |
+| Blank                                             |                                                                 |                                                                             |
+| ![Blank Diagram](img/blank.svg)                   | `'' {*!} {*?} {#Space}`                                         | It's blank! Self descriptive                                                |
+| Capitalization                                    |                                                                 |                                                                             |
+| ![Capitalization Diagram](img/capitalization.svg) | `{*-\|} {*<} {<} {*>}`                                          | Up at the top, separate, it's pointy like capital letters                   |
+| !                                                 |                                                                 |                                                                             |
+| ![Exclamation Diagram](img/exclamation.svg)       | `! ¬ ↦ ¡`                                                       | Vertical shape that's off to the left, like `!` on a regular keyboard       |
+| "                                                 |                                                                 |                                                                             |
+| ![Double Quote Diagram](img/double-quote.svg)     | `" “ ” „`                                                       | Two dots up high like its shape, and off to the left like on ISO keyboards  |
+| \#                                                |                                                                 |                                                                             |
+| ![Hash Diagram](img/hash.svg)                     | `# © ® ™`                                                       | Two vertical bars like in the shape                                         |
+| $                                                 |                                                                 |                                                                             |
+| ![Dollar Diagram](img/dollar.svg)                 | `$ ¥ € £`                                                       | Makes an `S` shape like a `$`                                               |
+| %                                                 |                                                                 |                                                                             |
+| ![Percent Diagram](img/percent.svg)               | `% ‰ ‱ φ`                                                       | Same as a `/` but with the two extra keys representing the dots             |
+| &                                                 |                                                                 |                                                                             |
+| ![Ampersand Diagram](img/ampersand.svg)           | `& ∩ ∧ ∈`                                                       | Same as the standard 'and' brief                                            |
+| '                                                 |                                                                 |                                                                             |
+| ![quote Diagram](img/quote.svg)                   | `' ‘ ’ ‚`                                                       | One dot up high, similar to `"`, on the index for importance                |
+| (                                                 |                                                                 |                                                                             |
+| ![Open Diagram](img/open.svg)                     | `( [ < {`                                                       | Similar to the standard steno brief                                         |
+| )                                                 |                                                                 |                                                                             |
+| ![Close Diagram](img/close.svg)                   | `) ] > }`                                                       | Similar to the standard steno brief                                         |
+| \*                                                |                                                                 |                                                                             |
+| ![Star Diagram](img/star.svg)                     | `* ∏ § ×`                                                       | single dot shape, off to the right like JIS, up high in the sky             |
+| +                                                 |                                                                 |                                                                             |
+| ![Plus Diagram](img/plus.svg)                     | `+ ∑ ¶ ±`                                                       | single dot shape, off to the right like JIS, under the star                 |
+| ,                                                 |                                                                 |                                                                             |
+| ![Comma Diagram](img/comma.svg)                   | `, ∪ ∨ ∉`                                                       | Single dot shape, below like on a keyboard, middle finger as less important |
+| -                                                 |                                                                 |                                                                             |
+| ![Dash Diagram](img/dash.svg)                     | `- − – —`                                                       | Line in shape, up in the top right like a normal keyboard                   |
+| .                                                 |                                                                 |                                                                             |
+| ![Dot Diagram](img/dot.svg)                       | `. • · …`                                                       | Single dot in shape, below like on a keyboard, index finger as important    |
+| /                                                 |                                                                 |                                                                             |
+| ![Slash Diagram](img/slash.svg)                   | `/ ⇒ ⇔ ÷`                                                       | Shape of a `/`                                                              |
+| :                                                 |                                                                 |                                                                             |
+| ![Colon Diagram](img/colon.svg)                   | `: ∋ ∵ ∴`                                                       | Vertical shape, off to the right like a normal keyboard                     |
+| ;                                                 |                                                                 |                                                                             |
+| ![Semicolon Diagram](img/semicolon.svg)           | `; ∀ ∃ ∄`                                                       | Literally a `,` and `.` at the same time                                    |
+| =                                                 |                                                                 |                                                                             |
+| ![Equals Diagram](img/equals.svg)                 | `= ≡ ≈ ≠`                                                       | Literally a `-` and a `_` at the same time                                  |
+| ?                                                 |                                                                 |                                                                             |
+| ![Question Diagram](img/question.svg)             | `? ¿ ∝ ‽`                                                       | Looks like the top of a `?`                                                 |
+| @                                                 |                                                                 |                                                                             |
+| ![At Diagram](img/at.svg)                         | `@ ⊕ ⊗ ∅`                                                       | Large complicated shape, only way to make a big spiral                      |
+| \\                                                |                                                                 |                                                                             |
+| ![Backslash Diagram](img/backslash.svg)           | `\ Δ √ ∞`                                                       | Shape of a `\`                                                              |
+| ^                                                 |                                                                 |                                                                             |
+| ![Caret Diagram](img/caret.svg)                   | `^ « » °`                                                       | Shape of a `^` and other pointy/raised symbols                              |
+| \_                                                |                                                                 |                                                                             |
+| ![Underscore Diagram](img/underscore.svg)         | `_ ≤ ≥ µ`                                                       | A line down low opposing `-`, and other lowered symbols                     |
+| \`                                                |                                                                 |                                                                             |
+| ![Backtick Diagram](img/backtick.svg)             | `` ` ⊂ ⊃ π``                                                    | Single dot up high, next to `'`                                             |
+| \|                                                |                                                                 |                                                                             |
+| ![Pipe Diagram](img/pipe.svg)                     | `\| ⊤ ⊥ ¦`                                                      | Nice symetrical vertical shape goes in the middle                           |
+| \~                                                |                                                                 |                                                                             |
+| ![Tilde Diagram](img/tilde.svg)                   | `~ ⊆ ⊇ ˜`                                                       | Makes the shape of a `~`                                                    |
+
+### Repetition
 
 You may want to duplicate certain symbols, such as logical OR `||` or org-mode headings `### Title`.
-Repetition is done with the `-T` and `-S` keys.
-
+Repetition is done in binary with the `E` and `U` keys.
 By default any symbol is typed out once.
-| Key                         | Output |
-|-----------------------------|--------|
-| ![One Diagram](img/one.png) | `:`    |
 
-When using the `-S` key, the symbol is typed twice in a row. 
-Think of 's' pluralising words.
-| Key                         | Output |
-|-----------------------------|--------|
-| ![Two Diagram](img/two.png) | `::`   |
-
-When using the `-T` key, the symbol is typed out three times in a row.
-Think _T_riple. 
 | Key                             | Output |
-|---------------------------------|--------|
-| ![Three Diagram](img/three.png) | `:::`  |
-
-When using both `-S` and `-T` the symbol is typed out a combined 4 times.
-| Key                           | Output |
-|-------------------------------|--------|
-| ![Four Diagram](img/four.png) | `::::` |
+| ------------------------------- | ------ |
+| ![One Diagram](img/one.svg)     | `:`    |
+| ![Two Diagram](img/two.svg)     | `::`   |
+| ![Three Diagram](img/three.svg) | `:::`  |
+| ![Four Diagram](img/four.svg)   | `::::` |
 
 ## Poster
 
-Check out the summary poster made by @sammdot for a nice one-page overview of how the whole dictionary works!
+Poster does not match this version of the dictionary.
+
+See the poster here:
 [emily-symbols-poster](emily-symbols-poster.pdf)
