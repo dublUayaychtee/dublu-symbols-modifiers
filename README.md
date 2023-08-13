@@ -30,18 +30,15 @@ These options are mapped to different sections of the steno board:
 
 ![Coloured Layout Diagram](img/layout.svg)
 
-### Unique Ender
+### Enders
 
-The `-TZ` part of the stroke is always the same.
-The `-LG` part distinguishes between symbols, letters, and numbers.
-
-![Unique Starter Diagram](img/ender.svg)
+The enders are used to tell what patterns should be used.
 
 | Keys                                            | Description             |
 | ----------------------------------------------- | ----------------------- |
-| ![Ender Diagram Symbols](img/ender-symbols.svg) | Use `-LTZ` for symbols  |
-| ![Ender Diagram Letters](img/ender-letters.svg) | Use `-GTZ` for letters  |
-| ![Ender Diagram Numbers](img/ender.svg)         | Use `-LGTZ` for numbers |
+| ![Ender Diagram Letters](img/ender-letters.svg) | Use `-LGSZ` for letters |
+| ![Ender Diagram Symbols](img/ender-symbols.svg) | Use `-LTDZ` for symbols |
+| ![Ender Diagram Numbers](img/ender-numbers.svg) | Use `-GSDZ` for numbers |
 
 ### Modifier keys
 
