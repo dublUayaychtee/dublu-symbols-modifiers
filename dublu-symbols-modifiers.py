@@ -6,8 +6,8 @@
 
 import re
 from plover.key_combo import CHAR_TO_KEYNAME
-#             standard command num/fn
-uniqueEnders = ["LTZ", "GTZ", "LGTZ"]
+#             symbols letters num/fn key
+uniqueEnders = ["LTDZ", "LGSZ", "GSDZ"]
 
 # define if attachment keys define where "space"s or "attachment"s lie
 attachmentMethod = "space"
